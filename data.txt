@@ -1,0 +1,2 @@
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yyashpatilyeola@gmail.com

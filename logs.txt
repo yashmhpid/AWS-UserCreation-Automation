@@ -1,0 +1,1435 @@
+[ec2-user@ip-172-31-50-41 ~]$ sudo su
+[root@ip-172-31-50-41 ec2-user]# pi clientInputFile.txt
+bash: pi: command not found
+[root@ip-172-31-50-41 ec2-user]# vi clientInputFile.txt
+[root@ip-172-31-50-41 ec2-user]# aws iam create-user --user-name Bob
+{
+    "User": {
+        "UserName": "Bob",
+        "Path": "/",
+        "CreateDate": "2020-06-01T10:56:21Z",
+        "UserId": "AIDAQ2UB2TQ3QQT5DSLWS",
+        "Arn": "arn:aws:iam::057180593207:user/Bob"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# aws iam create-access-key --user-name Bob
+{
+    "AccessKey": {
+        "UserName": "Bob",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T10:56:47Z",
+        "SecretAccessKey": "iGfwJsmUT0ddlYisgsexGFkxagA/7bYnpIroSQSg",
+        "AccessKeyId": "AKIAQ2UB2TQ32OAQOMWO"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# aws iam attach-user-policy --policy-arn arn:aws                                             :iam::aws:policy/AmazonEC2FullAccess --user-name bob
+[root@ip-172-31-50-41 ec2-user]# aws iam delete-user-policy --user-name Bob --po                                             licy-name AmazonEC2FullAccess
+
+An error occurred (NoSuchEntity) when calling the DeleteUserPolicy operation: Th                                             e user policy with name AmazonEC2FullAccess cannot be found.
+[root@ip-172-31-50-41 ec2-user]# aws iam delete-user-policy --user-name bob --po                                             licy-name AmazonEC2FullAccess
+
+An error occurred (NoSuchEntity) when calling the DeleteUserPolicy operation: Th                                             e user policy with name AmazonEC2FullAccess cannot be found.
+[root@ip-172-31-50-41 ec2-user]# aws iam delete-user-policy --user-name bob --po                                             licy-name AmazonEC2FullAccess
+
+An error occurred (NoSuchEntity) when calling the DeleteUserPolicy operation: Th                                             e user policy with name AmazonEC2FullAccess cannot be found.
+[root@ip-172-31-50-41 ec2-user]# aws iam detach-user-policy --user-name Bob --po                                             licy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
+[root@ip-172-31-50-41 ec2-user]# vi clientInputFile.txt                                                                      [root@ip-172-31-50-41 ec2-user]# vi clientInputFile.txt
+[root@ip-172-31-50-41 ec2-user]# while read line; do echo $line; done < clientIn                                             putFile.txt
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: invalid option -- 'i'
+Try 'head --help' for more information.
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: invalid option -- 'l'
+Try 'head --help' for more information.
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: invalid option -- 'l'
+Try 'head --help' for more information.
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: cannot open ‘Home/clientInputFile.txt’ for reading: No such file or directory
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: db: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: id1: command not found
+my Name
+[root@ip-172-31-50-41 ec2-user]# head -1 clinetInputFile.txt
+head: cannot open ‘clinetInputFile.txt’ for reading: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# head -1 clientInputFile.txt
+username|access|emailid
+[root@ip-172-31-50-41 ec2-user]# id1 = `head -l clientInputFile.txt` echo "$id1"
+head: invalid option -- 'l'
+Try 'head --help' for more information.
+bash: id1: command not found
+[root@ip-172-31-50-41 ec2-user]# id1 = `head -l clientInputFile.txt`
+head: invalid option -- 'l'
+Try 'head --help' for more information.
+bash: id1: command not found
+[root@ip-172-31-50-41 ec2-user]# id1 = `head -l clientInputFile.txt`
+head: invalid option -- 'l'
+Try 'head --help' for more information.
+bash: id1: command not found
+[root@ip-172-31-50-41 ec2-user]# id1 = `head -1 clientInputFile.txt`
+bash: id1: command not found
+[root@ip-172-31-50-41 ec2-user]# id1 = `head -1 clientInputFile.txt``head -1 clientInputFile.txt`
+bash: id1: command not found
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 7: syntax error: unexpected end of file
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 6: syntax error: unexpected end of file
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: name: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 8: company.txt: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+Line No. 1 : username|access|emailid
+Line No. 2 : yash|AmazonEC2FullAccess|yashp8180@gmail.com
+Line No. 3 : kawal|AmazonS3FullAccess|yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+Line No. 1 : username|access|emailid
+Line No. 2 : yash|AmazonEC2FullAccess|yashp8180@gmail.com
+Line No. 3 : kawal|AmazonS3FullAccess|yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: invalid option -- 'l'
+Try 'head --help' for more information.
+myfirstprj.sh: line 3: name: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: cannot open ‘filename’ for reading: No such file or directory
+myfirstprj.sh: line 3: name: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 3: name: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 2: config.txt: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 2: clientInputFile.txt: command not found
+
+[root@ip-172-31-50-41 ec2-user]# ls
+clientInputFile.txt  myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 2: data.txt: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 2: data.txt: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# vi clientInputFile.txt
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+myfirstprj.sh: line 7: syntax error: unexpected end of file
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+myfirstprj.sh: line 7: username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+myfirstprj.sh: line 7: syntax error: unexpected end of file
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+myfirstprj.sh: line 7: username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 6: username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 6: username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 5: .txt: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username|access|emailid
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+head: cannot open ‘line’ for reading: No such file or directory
+myfirstprj.sh: line 4: na1: command not found
+
+head: cannot open ‘line’ for reading: No such file or directory
+myfirstprj.sh: line 4: na1: command not found
+
+head: cannot open ‘line’ for reading: No such file or directory
+myfirstprj.sh: line 4: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+myfirstprj.sh: line 4: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 2: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 2: na1: command not found
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi distros.txt
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+apt is the package manager for Ubuntu
+apt is the package manager for Debian
+yum is the package manager for CentOS
+pacman is the package manager for Arch Linux
+dnf is the package manager for Fedora
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# vi datac.txt
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi datac.txt
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+name is the name, access is permission and email of user is email
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+myfirstprj.sh: line 2: heat: command not found
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+tail: cannot open ‘+2’ for reading: No such file or directory
+tail: cannot open ‘data’ for reading: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+tail: cannot open ‘+2’ for reading: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+head: cannot open ‘+2’ for reading: No such file or directory
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+myfirstprj.sh: line 1: unexpected EOF while looking for matching `''
+myfirstprj.sh: line 5: syntax error: unexpected end of file
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+sed: invalid option -- '2'
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place; hard links
+                 will still be broken.
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if extension supplied).
+                 The default operation mode is to break symbolic and hard links.
+                 This can be changed with --follow-symlinks and --copy.
+  -c, --copy
+                 use copy instead of rename when shuffling files in -i mode.
+                 While this will avoid breaking links (symbolic or hard), the
+                 resulting editing operation is not atomic.  This is rarely
+                 the desired mode; --follow-symlinks is usually enough, and
+                 it is both faster and more secure.
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -r, --regexp-extended
+                 use extended regular expressions in the script.
+  -s, --separate
+                 consider files as separate rather than as a single continuous
+                 long stream.
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <http://www.gnu.org/software/sed/>.
+General help using GNU software: <http://www.gnu.org/gethelp/>.
+[root@ip-172-31-50-41 ec2-user]# ^C
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+username is the name, access is permission and email of user is emailid
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+{
+    "User": {
+        "UserName": "username",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:53:04Z",
+        "UserId": "AIDAQ2UB2TQ35EQGEWEHC",
+        "Arn": "arn:aws:iam::057180593207:user/username"
+    }
+}
+
+An error occurred (NoSuchEntity) when calling the AttachUserPolicy operation: Policy arn:aws:iam::aws:policy/access does not exist or is not attachable.
+{
+    "User": {
+        "UserName": "yash",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:53:05Z",
+        "UserId": "AIDAQ2UB2TQ3WNZFC3UGN",
+        "Arn": "arn:aws:iam::057180593207:user/yash"
+    }
+}
+{
+    "User": {
+        "UserName": "kawal",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:53:06Z",
+        "UserId": "AIDAQ2UB2TQ3T7WBGFBFL",
+        "Arn": "arn:aws:iam::057180593207:user/kawal"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# vi data.tx
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+{
+    "User": {
+        "UserName": "yash",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:54:27Z",
+        "UserId": "AIDAQ2UB2TQ3XM3WLPIDJ",
+        "Arn": "arn:aws:iam::057180593207:user/yash"
+    }
+}
+{
+    "User": {
+        "UserName": "kawal",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:54:28Z",
+        "UserId": "AIDAQ2UB2TQ3TF6CU74PK",
+        "Arn": "arn:aws:iam::057180593207:user/kawal"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# ls
+clientInputFile.txt  datac.txt  data.tx  data.txt  distros.txt  kawal.txt  myfirstprj.sh  username.txt  yash.txt
+[root@ip-172-31-50-41 ec2-user]# cat kawal.txt
+aws iam create-access-key --user-name kawal
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# cat kawal.txt
+aws iam create-access-key --user-name kawal
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+{
+    "User": {
+        "UserName": "yash",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:56:17Z",
+        "UserId": "AIDAQ2UB2TQ3U2VF35AHT",
+        "Arn": "arn:aws:iam::057180593207:user/yash"
+    }
+}
+{
+    "User": {
+        "UserName": "kawal",
+        "Path": "/",
+        "CreateDate": "2020-06-01T13:56:18Z",
+        "UserId": "AIDAQ2UB2TQ3ZF5JLIDXN",
+        "Arn": "arn:aws:iam::057180593207:user/kawal"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# cat kawal.txt
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T13:56:19Z",
+        "SecretAccessKey": "/Jfj1c1c9nKk5+JhFJZiazF+crWlmLcAE62xY2/o",
+        "AccessKeyId": "AKIAQ2UB2TQ34HXGWS3J"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# sudo apt install ssmtp
+sudo: apt: command not found
+[root@ip-172-31-50-41 ec2-user]# sudo apt-get install
+sudo: apt-get: command not found
+[root@ip-172-31-50-41 ec2-user]# yum install ssmtp
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                                                             | 2.1 kB  00:00:00
+amzn-updates                                                                                          | 2.5 kB  00:00:00
+No package ssmtp available.
+Error: Nothing to do
+[root@ip-172-31-50-41 ec2-user]# sudo yum update -y
+Loaded plugins: priorities, update-motd, upgrade-helper
+Resolving Dependencies
+--> Running transaction check
+---> Package aws-cfn-bootstrap.noarch 0:1.4-31.22.amzn1 will be updated
+---> Package aws-cfn-bootstrap.noarch 0:1.4-32.23.amzn1 will be an update
+---> Package bind-libs.x86_64 32:9.8.2-0.68.rc1.60.amzn1 will be updated
+---> Package bind-libs.x86_64 32:9.8.2-0.68.rc1.64.amzn1 will be an update
+---> Package bind-utils.x86_64 32:9.8.2-0.68.rc1.60.amzn1 will be updated
+---> Package bind-utils.x86_64 32:9.8.2-0.68.rc1.64.amzn1 will be an update
+---> Package krb5-libs.x86_64 0:1.15.1-34.44.amzn1 will be updated
+---> Package krb5-libs.x86_64 0:1.15.1-46.48.amzn1 will be an update
+---> Package python27.x86_64 0:2.7.16-1.131.amzn1 will be updated
+---> Package python27.x86_64 0:2.7.18-1.137.amzn1 will be an update
+---> Package python27-devel.x86_64 0:2.7.16-1.131.amzn1 will be updated
+---> Package python27-devel.x86_64 0:2.7.18-1.137.amzn1 will be an update
+---> Package python27-libs.x86_64 0:2.7.16-1.131.amzn1 will be updated
+---> Package python27-libs.x86_64 0:2.7.18-1.137.amzn1 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================
+ Package                        Arch                Version                                  Repository                 Size
+=============================================================================================================================
+Updating:
+ aws-cfn-bootstrap              noarch              1.4-32.23.amzn1                          amzn-updates              874 k
+ bind-libs                      x86_64              32:9.8.2-0.68.rc1.64.amzn1               amzn-updates              1.0 M
+ bind-utils                     x86_64              32:9.8.2-0.68.rc1.64.amzn1               amzn-updates              272 k
+ krb5-libs                      x86_64              1.15.1-46.48.amzn1                       amzn-updates              936 k
+ python27                       x86_64              2.7.18-1.137.amzn1                       amzn-updates              103 k
+ python27-devel                 x86_64              2.7.18-1.137.amzn1                       amzn-updates              526 k
+ python27-libs                  x86_64              2.7.18-1.137.amzn1                       amzn-updates              6.8 M
+
+Transaction Summary
+=============================================================================================================================
+Upgrade  7 Packages
+
+Total download size: 10 M
+Downloading packages:
+(1/7): bind-utils-9.8.2-0.68.rc1.64.amzn1.x86_64.rpm                                                  | 272 kB  00:00:00
+(2/7): python27-2.7.18-1.137.amzn1.x86_64.rpm                                                         | 103 kB  00:00:00
+(3/7): aws-cfn-bootstrap-1.4-32.23.amzn1.noarch.rpm                                                   | 874 kB  00:00:00
+(4/7): krb5-libs-1.15.1-46.48.amzn1.x86_64.rpm                                                        | 936 kB  00:00:00
+(5/7): python27-devel-2.7.18-1.137.amzn1.x86_64.rpm                                                   | 526 kB  00:00:00
+(6/7): bind-libs-9.8.2-0.68.rc1.64.amzn1.x86_64.rpm                                                   | 1.0 MB  00:00:00
+(7/7): python27-libs-2.7.18-1.137.amzn1.x86_64.rpm                                                    | 6.8 MB  00:00:00
+-----------------------------------------------------------------------------------------------------------------------------
+Total                                                                                        6.1 MB/s |  10 MB  00:00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : python27-libs-2.7.18-1.137.amzn1.x86_64                                                                  1/14
+  Updating   : python27-2.7.18-1.137.amzn1.x86_64                                                                       2/14
+  Updating   : krb5-libs-1.15.1-46.48.amzn1.x86_64                                                                      3/14
+  Updating   : 32:bind-libs-9.8.2-0.68.rc1.64.amzn1.x86_64                                                              4/14
+  Updating   : 32:bind-utils-9.8.2-0.68.rc1.64.amzn1.x86_64                                                             5/14
+  Updating   : python27-devel-2.7.18-1.137.amzn1.x86_64                                                                 6/14
+  Updating   : aws-cfn-bootstrap-1.4-32.23.amzn1.noarch                                                                 7/14
+  Cleanup    : python27-devel-2.7.16-1.131.amzn1.x86_64                                                                 8/14
+  Cleanup    : 32:bind-utils-9.8.2-0.68.rc1.60.amzn1.x86_64                                                             9/14
+  Cleanup    : aws-cfn-bootstrap-1.4-31.22.amzn1.noarch                                                                10/14
+  Cleanup    : python27-libs-2.7.16-1.131.amzn1.x86_64                                                                 11/14
+  Cleanup    : python27-2.7.16-1.131.amzn1.x86_64                                                                      12/14
+  Cleanup    : 32:bind-libs-9.8.2-0.68.rc1.60.amzn1.x86_64                                                             13/14
+  Cleanup    : krb5-libs-1.15.1-34.44.amzn1.x86_64                                                                     14/14
+  Verifying  : python27-devel-2.7.18-1.137.amzn1.x86_64                                                                 1/14
+  Verifying  : 32:bind-libs-9.8.2-0.68.rc1.64.amzn1.x86_64                                                              2/14
+  Verifying  : python27-2.7.18-1.137.amzn1.x86_64                                                                       3/14
+  Verifying  : 32:bind-utils-9.8.2-0.68.rc1.64.amzn1.x86_64                                                             4/14
+  Verifying  : aws-cfn-bootstrap-1.4-32.23.amzn1.noarch                                                                 5/14
+  Verifying  : python27-libs-2.7.18-1.137.amzn1.x86_64                                                                  6/14
+  Verifying  : krb5-libs-1.15.1-46.48.amzn1.x86_64                                                                      7/14
+  Verifying  : python27-libs-2.7.16-1.131.amzn1.x86_64                                                                  8/14
+  Verifying  : krb5-libs-1.15.1-34.44.amzn1.x86_64                                                                      9/14
+  Verifying  : aws-cfn-bootstrap-1.4-31.22.amzn1.noarch                                                                10/14
+  Verifying  : 32:bind-libs-9.8.2-0.68.rc1.60.amzn1.x86_64                                                             11/14
+  Verifying  : python27-2.7.16-1.131.amzn1.x86_64                                                                      12/14
+  Verifying  : 32:bind-utils-9.8.2-0.68.rc1.60.amzn1.x86_64                                                            13/14
+  Verifying  : python27-devel-2.7.16-1.131.amzn1.x86_64                                                                14/14
+
+Updated:
+  aws-cfn-bootstrap.noarch 0:1.4-32.23.amzn1                    bind-libs.x86_64 32:9.8.2-0.68.rc1.64.amzn1
+  bind-utils.x86_64 32:9.8.2-0.68.rc1.64.amzn1                  krb5-libs.x86_64 0:1.15.1-46.48.amzn1
+  python27.x86_64 0:2.7.18-1.137.amzn1                          python27-devel.x86_64 0:2.7.18-1.137.amzn1
+  python27-libs.x86_64 0:2.7.18-1.137.amzn1
+
+Complete!
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# yum install ssmtp
+Loaded plugins: priorities, update-motd, upgrade-helper
+No package ssmtp available.
+Error: Nothing to do
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# sendmail yashp8180@gmail.com < data.txt
+[root@ip-172-31-50-41 ec2-user]# yum install mail utils
+Loaded plugins: priorities, update-motd, upgrade-helper
+No package utils available.
+Resolving Dependencies
+--> Running transaction check
+---> Package mailx.x86_64 0:12.4-8.8.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================
+ Package                   Arch                       Version                            Repository                     Size
+=============================================================================================================================
+Installing:
+ mailx                     x86_64                     12.4-8.8.amzn1                     amzn-main                     254 k
+
+Transaction Summary
+=============================================================================================================================
+Install  1 Package
+
+Total download size: 254 k
+Installed size: 451 k
+Is this ok [y/d/N]: y
+Downloading packages:
+mailx-12.4-8.8.amzn1.x86_64.rpm                                                                       | 254 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mailx-12.4-8.8.amzn1.x86_64                                                                               1/1
+  Verifying  : mailx-12.4-8.8.amzn1.x86_64                                                                               1/1
+
+Installed:
+  mailx.x86_64 0:12.4-8.8.amzn1
+
+Complete!
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# mail -s 'subject' yashp8180@gmail.com
+testing mail
+cc : yashpatilyeola@gmail.com
+
+
+
+dsdas
+as
+das
+as
+as
+as
+as
+subject : yash
+
+
+^C
+(Interrupt -- one more to kill letter)
+
+^C
+(Interrupt -- one more to kill letter)
+^C"/root/dead.letter" 16/89
+[root@ip-172-31-50-41 ec2-user]# ^C
+[root@ip-172-31-50-41 ec2-user]# ^C
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# mail -s 'subject' yashp8180@gmail.com
+Cc: yashpatilyeola@gmail.com
+testing mail
+EOT
+[root@ip-172-31-50-41 ec2-user]# echo "hello " | mail -s "subject" yashpatilyeola@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi message.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from sender@example.com --destination file://destination.json --mes^Cg message.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yyashpatilyeola@gmail.com --destination destination.json --message message.json
+
+Error parsing parameter '--destination': Expected: '=', received: 'EOF' for input:
+destination.json
+                ^
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi message.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination destination.json --message message.json
+
+Error parsing parameter '--destination': Expected: '=', received: 'EOF' for input:
+destination.json
+                ^
+[root@ip-172-31-50-41 ec2-user]# Error parsing parameter '--destination': Expected: '=', received: 'EOF' for input:
+bash: Error: command not found
+[root@ip-172-31-50-41 ec2-user]# destination.json
+bash: destination.json: command not found
+[root@ip-172-31-50-41 ec2-user]# ^C
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+You must specify a region. You can also configure your region by running "aws configure".
+[root@ip-172-31-50-41 ec2-user]# aws configure
+AWS Access Key ID [None]:
+AWS Secret Access Key [None]:
+Default region name [None]: us-east-1
+Default output format [None]: json
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+
+An error occurred (InvalidParameterValue) when calling the SendEmail operation: Invalid email address .
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+
+An error occurred (InvalidParameterValue) when calling the SendEmail operation: Invalid email address .
+[root@ip-172-31-50-41 ec2-user]# ^C
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+
+Error parsing parameter '--destination': Invalid JSON: Expecting property name enclosed in double quotes: line 3 column 1 (char 49)
+JSON received: {
+  "ToAddresses":  ["yashp8180@gmail.com", ""],
+}
+
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+
+An error occurred (InvalidParameterValue) when calling the SendEmail operation: Invalid email address .
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+
+An error occurred (InvalidParameterValue) when calling the SendEmail operation: Invalid email address .
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+
+An error occurred (MessageRejected) when calling the SendEmail operation: Email address is not verified. The following identities failed the check in region US-EAST-1: yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+{
+    "MessageId": "010001727088fae9-71c7a423-ffa0-4a08-ac5c-aaee4ea31f18-000000"
+}
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json^C
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# ls
+clientInputFile.txt  data.tx   destination.json  kawal.txt     myfirstprj.sh  yash.txt
+datac.txt            data.txt  distros.txt       message.json  username.txt
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# data.txt
+bash: data.txt: command not found
+[root@ip-172-31-50-41 ec2-user]# cat data.txt
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yashp8180@gmail.com
+[root@ip-172-31-50-41 ec2-user]# vi data.txt
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+myfirstprj.sh: line 8: jq: command not found
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+myfirstprj.sh: line 8: jq: command not found
+Sound
+[root@ip-172-31-50-41 ec2-user]# ^C
+[root@ip-172-31-50-41 ec2-user]# yum install jq
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                                                             | 2.1 kB  00:00:00
+amzn-updates                                                                                          | 2.5 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package jq.x86_64 0:1.5-1.2.amzn1 will be installed
+--> Processing Dependency: jq-libs(x86-64) = 1.5-1.2.amzn1 for package: jq-1.5-1.2.amzn1.x86_64
+--> Processing Dependency: oniguruma for package: jq-1.5-1.2.amzn1.x86_64
+--> Processing Dependency: libonig.so.2()(64bit) for package: jq-1.5-1.2.amzn1.x86_64
+--> Processing Dependency: libjq.so.1()(64bit) for package: jq-1.5-1.2.amzn1.x86_64
+--> Running transaction check
+---> Package jq-libs.x86_64 0:1.5-1.2.amzn1 will be installed
+---> Package oniguruma.x86_64 0:5.9.6-4.4.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================
+ Package                     Arch                     Version                           Repository                      Size
+=============================================================================================================================
+Installing:
+ jq                          x86_64                   1.5-1.2.amzn1                     amzn-main                       44 k
+Installing for dependencies:
+ jq-libs                     x86_64                   1.5-1.2.amzn1                     amzn-main                      121 k
+ oniguruma                   x86_64                   5.9.6-4.4.amzn1                   amzn-updates                   153 k
+
+Transaction Summary
+=============================================================================================================================
+Install  1 Package (+2 Dependent packages)
+
+Total download size: 317 k
+Installed size: 888 k
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/3): jq-1.5-1.2.amzn1.x86_64.rpm                                                                    |  44 kB  00:00:00
+(2/3): oniguruma-5.9.6-4.4.amzn1.x86_64.rpm                                                           | 153 kB  00:00:00
+(3/3): jq-libs-1.5-1.2.amzn1.x86_64.rpm                                                               | 121 kB  00:00:00
+-----------------------------------------------------------------------------------------------------------------------------
+Total                                                                                        616 kB/s | 317 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : oniguruma-5.9.6-4.4.amzn1.x86_64                                                                          1/3
+  Installing : jq-libs-1.5-1.2.amzn1.x86_64                                                                              2/3
+  Installing : jq-1.5-1.2.amzn1.x86_64                                                                                   3/3
+  Verifying  : oniguruma-5.9.6-4.4.amzn1.x86_64                                                                          1/3
+  Verifying  : jq-1.5-1.2.amzn1.x86_64                                                                                   2/3
+  Verifying  : jq-libs-1.5-1.2.amzn1.x86_64                                                                              3/3
+
+Installed:
+  jq.x86_64 0:1.5-1.2.amzn1
+
+Dependency Installed:
+  jq-libs.x86_64 0:1.5-1.2.amzn1                              oniguruma.x86_64 0:5.9.6-4.4.amzn1
+
+Complete!
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# ls
+clientInputFile.txt  data.tx   destination.json  kawal.txt     myfirstprj.sh  yash.txt
+datac.txt            data.txt  distros.txt       message.json  username.txt
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+jq: error: emailid/0 is not defined at <top-level>, line 1:
+{ "ToAddresses":  [$emailid] }
+jq: 1 compile error
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+jq: error: emailid/0 is not defined at <top-level>, line 1:
+{ "ToAddresses":  [$emailid] }
+jq: 1 compile error
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+count
+Sound
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+count
+Sound
+[root@ip-172-31-50-41 ec2-user]# vi destination.json
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# vi input.json
+[root@ip-172-31-50-41 ec2-user]# sh  myemailformat.sh
+jq: error (at input.json:1): Cannot index string with string "UserDetailList"
+parse error: Expected string key before ':' at line 1, column 17
+[root@ip-172-31-50-41 ec2-user]# vi input.json
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# sh myemailformat.sh
+jq: error (at input.json:1): Cannot index string with string "UserDetailList"
+parse error: Expected string key before ':' at line 1, column 17
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi input.json
+[root@ip-172-31-50-41 ec2-user]# sh myemailformat.sh
+"ec2-provisioning","EC2FullAccess"
+"ec2-provisioning","AmazonS3FullAccess"
+"read-only-iam-permissions","IAMReadOnlyAccess"
+[root@ip-172-31-50-41 ec2-user]# vi input.txt
+[root@ip-172-31-50-41 ec2-user]# vi input.json
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# cat input.txt
+"UserDetailList": [
+{
+    "UserName": "ec2-provisioning",
+    "GroupList": [],
+    "CreateDate": "2017-11-07T14:20:14Z",
+    "UserId": "1234556",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "EC2FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+        },
+        {
+            "PolicyName": "AmazonS3FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::1234567890:user/citrix-xendesktop-ec2-provisioning"
+},
+{
+    "UserName": "read-only-iam-permissions",
+    "GroupList": [],
+    "CreateDate": "2018-03-09T11:13:38Z",
+    "UserId": "AABCDEFGHG6EQ",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "IAMReadOnlyAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::123456789:user/rundeck-read-only-iam-permissions"
+}]
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# cat input.txt
+"UserDetailList": [
+{
+    "UserName": "ec2-provisioning",
+    "GroupList": [],
+    "CreateDate": "2017-11-07T14:20:14Z",
+    "UserId": "1234556",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "EC2FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+        },
+        {
+            "PolicyName": "AmazonS3FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::1234567890:user/citrix-xendesktop-ec2-provisioning"
+},
+{
+    "UserName": "read-only-iam-permissions",
+    "GroupList": [],
+    "CreateDate": "2018-03-09T11:13:38Z",
+    "UserId": "AABCDEFGHG6EQ",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "IAMReadOnlyAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::123456789:user/rundeck-read-only-iam-permissions"
+}]
+[root@ip-172-31-50-41 ec2-user]# wq
+bash: wq: command not found
+[root@ip-172-31-50-41 ec2-user]# cat input.json
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T13:56:19Z",
+        "SecretAccessKey": "/Jfj1c1c9nKk5+JhFJZiazF+crWlmLcAE62xY2/o",
+        "AccessKeyId": "AKIAQ2UB2TQ34HXGWS3J"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# cat input.json
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T13:56:19Z",
+        "SecretAccessKey": "/Jfj1c1c9nKk5+JhFJZiazF+crWlmLcAE62xY2/o",
+        "AccessKeyId": "AKIAQ2UB2TQ34HXGWS3J"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# cat input.txt
+"UserDetailList": [
+{
+    "UserName": "ec2-provisioning",
+    "GroupList": [],
+    "CreateDate": "2017-11-07T14:20:14Z",
+    "UserId": "1234556",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "EC2FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+        },
+        {
+            "PolicyName": "AmazonS3FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::1234567890:user/citrix-xendesktop-ec2-provisioning"
+},
+{
+    "UserName": "read-only-iam-permissions",
+    "GroupList": [],
+    "CreateDate": "2018-03-09T11:13:38Z",
+    "UserId": "AABCDEFGHG6EQ",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "IAMReadOnlyAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::123456789:user/rundeck-read-only-iam-permissions"
+}]
+[root@ip-172-31-50-41 ec2-user]# cat input.json
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T13:56:19Z",
+        "SecretAccessKey": "/Jfj1c1c9nKk5+JhFJZiazF+crWlmLcAE62xY2/o",
+        "AccessKeyId": "AKIAQ2UB2TQ34HXGWS3J"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+
+[1]+  Stopped                 vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# cat input.txt
+"UserDetailList": [
+{
+    "UserName": "ec2-provisioning",
+    "GroupList": [],
+    "CreateDate": "2017-11-07T14:20:14Z",
+    "UserId": "1234556",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "EC2FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
+        },
+        {
+            "PolicyName": "AmazonS3FullAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::1234567890:user/citrix-xendesktop-ec2-provisioning"
+},
+{
+    "UserName": "read-only-iam-permissions",
+    "GroupList": [],
+    "CreateDate": "2018-03-09T11:13:38Z",
+    "UserId": "AABCDEFGHG6EQ",
+    "Path": "/",
+    "AttachedManagedPolicies": [
+        {
+            "PolicyName": "IAMReadOnlyAccess",
+            "PolicyArn": "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
+        }
+    ],
+    "Arn": "arn:aws:iam::123456789:user/rundeck-read-only-iam-permissions"
+}]
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# sh myemailformat.sh
+jq: error: syntax error, unexpected '{', expecting $end (Unix shell quoting issues?) at <top-level>, line 1:
+.AccessKey{} | .UserName as $u | .SecretAccessKey as $s | .AccessKeyId as $a | @csv)
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]# vi myemailformat.sh
+[root@ip-172-31-50-41 ec2-user]# sh myemailformat.sh
+jq: error: syntax error, unexpected '{', expecting $end (Unix shell quoting issues?) at <top-level>, line 1:
+.AccessKey{} | .UserName as $u | .SecretAccessKey as $s | .AccessKeyId as $a |([$u,.UserName] | @csv)
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+[root@ip-172-31-50-41 ec2-user]# ls
+clientInputFile.txt  datac.txt  data.txt          distros.txt  input.txt  message.json      myfirstprj.sh  yash.txt
+credentails.txt      data.tx    destination.json  input.json   kawal.txt  myemailformat.sh  username.txt
+[root@ip-172-31-50-41 ec2-user]# cat credentails.txt
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:48:41Z",
+        "SecretAccessKey": "o7QTtMeQ9xLJNrISuCpL7daHTDE6WEKeeJEc6+kz",
+        "AccessKeyId": "AKIAQ2UB2TQ3UOHW3JD4"
+    }
+}
+[root@ip-172-31-50-41 ec2-user]# cat message.json
+{
+  "Subject": {
+    "Data": "Test email sent using the AWS CLI",
+    "Charset": "UTF-8"
+  },
+  "Body": {
+    "Text": {
+      "Data": "This is the message body in text format.",
+      "Charset": "UTF-8"
+    },
+    "Html": {
+      "Data": "This message body contains HTML formatting. It can, for example, contain links like this one: \n                   $value",
+      "Charset": "UTF-8"
+    }
+  }
+}
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+
+An error occurred (LimitExceeded) when calling the CreateAccessKey operation: Cannot exceed quota for AccessKeysPerUser: 2
+jq: error: syntax error, unexpected '$', expecting '}' (Unix shell quoting issues?) at <top-level>, line 13:
+                   "$value,
+jq: 1 compile error
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+
+An error occurred (LimitExceeded) when calling the CreateAccessKey operation: Cannot exceed quota for AccessKeysPerUser: 2
+jq: error: syntax error, unexpected '$', expecting '}' (Unix shell quoting issues?) at <top-level>, line 13:
+                   "$value,
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]# cat message.json
+[root@ip-172-31-50-41 ec2-user]# cat credentails.txt
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+
+An error occurred (LimitExceeded) when calling the CreateAccessKey operation: Cannot exceed quota for AccessKeysPerUser: 2
+
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+
+An error occurred (LimitExceeded) when calling the CreateAccessKey operation: Cannot exceed quota for AccessKeysPerUser: 2
+
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+
+[root@ip-172-31-50-41 ec2-user]# cat credentails.txt
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+
+[root@ip-172-31-50-41 ec2-user]# cat message.json
+{
+  "Subject": {
+    "Data": "Test email sent using the AWS CLI",
+    "Charset": "UTF-8"
+  },
+  "Body": {
+    "Text": {
+      "Data": "This is the message body in text format.",
+      "Charset": "UTF-8"
+    },
+    "Html": {
+      "Data": "This message body contains HTML formatting. It can, for example, contain links like this one: \n                   $value",
+      "Charset": "UTF-8"
+    }
+  }
+}
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+{
+    "User": {
+        "UserName": "yash",
+        "Path": "/",
+        "CreateDate": "2020-06-01T17:58:34Z",
+        "UserId": "AIDAQ2UB2TQ35FXXCZI6Y",
+        "Arn": "arn:aws:iam::057180593207:user/yash"
+    }
+}
+{
+    "AccessKey": {
+        "UserName": "yash",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:58:34Z",
+        "SecretAccessKey": "M/kAZ5pxry+RRYA4CSuukQmjt6OAtUx8sKHtjued",
+        "AccessKeyId": "AKIAQ2UB2TQ3VIZSIGJU"
+    }
+}
+jq: error: syntax error, unexpected '{', expecting '}' (Unix shell quoting issues?) at <top-level>, line 13:
+                   "{
+jq: 1 compile error
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+{
+    "User": {
+        "UserName": "kawal",
+        "Path": "/",
+        "CreateDate": "2020-06-01T17:58:35Z",
+        "UserId": "AIDAQ2UB2TQ32GV3AVCJX",
+        "Arn": "arn:aws:iam::057180593207:user/kawal"
+    }
+}
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:58:35Z",
+        "SecretAccessKey": "1MrVosHYLMgPiC52ndbFAHFy7BOw6cbD6Zs8W34Z",
+        "AccessKeyId": "AKIAQ2UB2TQ35NHKILBM"
+    }
+}
+jq: error: syntax error, unexpected '{', expecting '}' (Unix shell quoting issues?) at <top-level>, line 13:
+                   "{
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# wq
+bash: wq: command not found
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:58:35Z",
+        "SecretAccessKey": "1MrVosHYLMgPiC52ndbFAHFy7BOw6cbD6Zs8W34Z",
+        "AccessKeyId": "AKIAQ2UB2TQ35NHKILBM"
+    }
+}
+jq: error: syntax error, unexpected $end, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Unix shell quoting issues?) at <top-level>, line 12:
+           "Data": "{
+jq: 1 compile error
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:58:35Z",
+        "SecretAccessKey": "1MrVosHYLMgPiC52ndbFAHFy7BOw6cbD6Zs8W34Z",
+        "AccessKeyId": "AKIAQ2UB2TQ35NHKILBM"
+    }
+}
+jq: error: syntax error, unexpected $end, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Unix shell quoting issues?) at <top-level>, line 12:
+           "Data": "{
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]#
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:58:35Z",
+        "SecretAccessKey": "1MrVosHYLMgPiC52ndbFAHFy7BOw6cbD6Zs8W34Z",
+        "AccessKeyId": "AKIAQ2UB2TQ35NHKILBM"
+    }
+}
+jq: error: syntax error, unexpected $end, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Unix shell quoting issues?) at <top-level>, line 12:
+           "Data": "{
+jq: 1 compile error
+{
+    "AccessKey": {
+        "UserName": "kawal",
+        "Status": "Active",
+        "CreateDate": "2020-06-01T17:58:35Z",
+        "SecretAccessKey": "1MrVosHYLMgPiC52ndbFAHFy7BOw6cbD6Zs8W34Z",
+        "AccessKeyId": "AKIAQ2UB2TQ35NHKILBM"
+    }
+}
+jq: error: syntax error, unexpected $end, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Unix shell quoting issues?) at <top-level>, line 12:
+           "Data": "{
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+jq: error: syntax error, unexpected $end, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Unix shell quoting issues?) at <top-level>, line 12:
+           "Data": "{
+jq: 1 compile error
+jq: error: syntax error, unexpected $end, expecting QQSTRING_TEXT or QQSTRING_INTERP_START or QQSTRING_END (Unix shell quoting issues?) at <top-level>, line 12:
+           "Data": "{
+jq: 1 compile error
+[root@ip-172-31-50-41 ec2-user]# cat myfirstprj.sh
+#!/bin/sh
+while IFS='|' read -r name access emailid
+do
+  # echo "$name" is the name, "$access" is permission and email of user is "$emailid"
+  #aws iam create-user --user-name $name
+  #aws iam attach-user-policy --policy-arn arn:aws:iam::aws:policy/$access --user-name $name
+  #aws iam create-access-key --user-name $name > credentails.txt
+   value=`cat credentails.txt`
+#       echo "$value"
+   jq -n --arg value "$value" '{
+   "Subject": {
+       "Data": "Test email sent using the AWS CLI",
+       "Charset": "UTF-8"
+   },
+   "Body": {
+       "Text": {
+           "Data": "This is the message body in text format.",
+           "Charset": "UTF-8"
+       },
+       "Html": {
+           "Data": "'$value'",
+           "Charset": "UTF-8"
+       }
+   }
+}' > message.json
+  # jq -n --arg emailid "$emailid" '{ "ToAddresses":  [$emailid] }' > destination.json
+  # aws ses send-email --from yashpatilyeola@gmail.com --destination file://destination.json --message file://message.json
+done < data.txt
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# cat message.json
+{
+  "Subject": {
+    "Data": "Test email sent using the AWS CLI",
+    "Charset": "UTF-8"
+  },
+  "Body": {
+    "Text": {
+      "Data": "This is the message body in text format.",
+      "Charset": "UTF-8"
+    },
+    "Html": {
+      "Data": "$value",
+      "Charset": "UTF-8"
+    }
+  }
+}
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# cat message.json
+{
+  "Subject": {
+    "Data": "Test email sent using the AWS CLI",
+    "Charset": "UTF-8"
+  },
+  "Body": {
+    "Text": {
+      "Data": "This is the message body in text format.",
+      "Charset": "UTF-8"
+    },
+    "Html": {
+      "Data": "{\n    \"AccessKey\": {\n        \"UserName\": \"kawal\", \n        \"Status\": \"Active\", \n        \"CreateDate\": \"2020-06-01T17:58:35Z\", \n        \"SecretAccessKey\": \"1MrVosHYLMgPiC52ndbFAHFy7BOw6cbD6Zs8W34Z\", \n        \"AccessKeyId\": \"AKIAQ2UB2TQ35NHKILBM\"\n    }\n}",
+      "Charset": "UTF-8"
+    }
+  }
+}
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# vi myfirstprj.sh
+[root@ip-172-31-50-41 ec2-user]# cat data.txt
+yash|AmazonEC2FullAccess|yashp8180@gmail.com
+kawal|AmazonS3FullAccess|yyashpatilyeola@gmail.com
+[root@ip-172-31-50-41 ec2-user]# sh myfirstprj.sh
+yash is the name, AmazonEC2FullAccess is permission and email of user is yashp8180@gmail.com
+{
+    "User": {
+        "UserName": "yash",
+        "Path": "/",
+        "CreateDate": "2020-06-01T18:11:46Z",
+        "UserId": "AIDAQ2UB2TQ36L3TBDV7Y",
+        "Arn": "arn:aws:iam::057180593207:user/yash"
+    }
+}
+{
+    "MessageId": "0100017271151c73-66994796-74da-42fc-a383-a51197b48300-000000"
+}
+kawal is the name, AmazonS3FullAccess is permission and email of user is yyashpatilyeola@gmail.com
+{
+    "User": {
+        "UserName": "kawal",
+        "Path": "/",
+        "CreateDate": "2020-06-01T18:11:49Z",
+        "UserId": "AIDAQ2UB2TQ35HTKDQQQ6",
+        "Arn": "arn:aws:iam::057180593207:user/kawal"
+    }
+}
+{
+    "MessageId": "01000172711525a6-78f6ebf4-b8f4-43d0-a5fe-62f334dde758-000000"
+}
+[root@ip-172-31-50-41 ec2-user]#

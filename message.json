@@ -1,0 +1,16 @@
+{
+  "Subject": {
+    "Data": "Dear Client Below are credenatils of your user",
+    "Charset": "UTF-8"
+  },
+  "Body": {
+    "Text": {
+      "Data": "This is the message body in text format.",
+      "Charset": "UTF-8"
+    },
+    "Html": {
+      "Data": "{\n    \"AccessKey\": {\n        \"UserName\": \"kawal\", \n        \"Status\": \"Active\", \n        \"CreateDate\": \"2020-06-01T18:11:50Z\", \n        \"SecretAccessKey\": \"7duX0ZjD5Uh3OI1TVbsXgsqMyFBuzDewr40xuFHX\", \n        \"AccessKeyId\": \"AKIAQ2UB2TQ36O4LVDDT\"\n    }\n}",
+      "Charset": "UTF-8"
+    }
+  }
+}
